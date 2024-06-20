@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - Новини штучного інтелекту</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            width: 100%;
+        }
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        .recaptcha {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: green;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Новини штучного інтелекту</h1>
+    </header>
+    <main>
+        <h2>Контакт з нами:</h2>
+        <form id="contactForm" method="POST">
+            <label for="name">Ваше ім'я:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Ваша електронна адреса:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Текст:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <div class="recaptcha">
+                <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+            </div>
+
+            <button type="submit">Надіслати</button>
+        </form>
+        <div class="message" id="successMessage">Ваше повідомлення надіслане.</div>
+    </main>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var form = event.target;
+            var formData = new FormData(form);
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            }).then(response => response.text()).then(responseText => {
+                if (responseText.includes('Дякуємо! Ваше повідомлення надіслано.')) {
+                    document.getElementById('successMessage').style.display = 'block';
+                } else {
+                    alert('Ваше повідомення надіслане.');
+                }
+            }).catch(error => {
+                alert('Ваше повідомення надіслане.');
+            });
+        });
+    </script>
+</body>
+</html>

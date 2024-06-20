@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про сайт - Новини штучного інтелекту</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/003/462/493/non_2x/abstract-futuristic-face-concept-artificial-intelligence-background-free-vector.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .header-top img {
+            height: 80px;
+        }
+        .header-title {
+            flex-grow: 1;
+            text-align: center;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px; /* Збільшений розмір */
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+        main {
+            padding: 20px;
+            min-height: calc(100vh - 120px);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        section {
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .about-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .about-text {
+            font-size: 1.2em;
+        }
+        .about-text.red-text {
+            color: red;
+        }
+        .about-image {
+            width: 800px;
+            height: 450px;
+            object-fit: cover;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .footer-nav {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .footer-nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        .footer-nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .map {
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                align-items: center;
+            }
+            .header-top img {
+                height: 60px;
+            }
+            .header-title h1 {
+                font-size: 1.5em;
+                text-align: center;
+            }
+            .about-title, .about-text {
+                font-size: 1.2em;
+            }
+            .about-image {
+                width: 100%;
+                height: auto;
+            }
+            .map iframe {
+                width: 300px;
+                height: 225px;
+            }
+        }
+        @media (max-width: 480px) {
+            .header-title h1 {
+                font-size: 1.2em;
+            }
+            .about-title {
+                font-size: 1.5em;
+            }
+            .about-text {
+                font-size: 1em;
+            }
+            nav ul li {
+                display: block;
+                margin: 5px 0;
+            }
+            .about-image {
+                width: 100%;
+                height: auto;
+            }
+            .map iframe {
+                width: 240px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <img src="1051px-Adobe_Illustrator_CC_icon.svg.png" alt="Логотип">
+            <div class="header-title">
+                <h1>Новини штучного інтелекту</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="about">
+            <h2 class="about-title">Про сайт</h2>
+            <p class="about-text">Наш портал присвячений останнім новинам та досягненням у сфері штучного інтелекту. Ми надаємо актуальну інформацію, аналітику та огляди новітніх технологій AI, що змінюють наш світ. Мета нашого сайту – підвищити обізнаність про AI та його вплив на різні аспекти нашого життя.</p>
+            <img src="imagоes.jfif" alt="Про сайт" class="about-image">
+            <p class="about-text">
+                Ми прагнемо бути головним джерелом інформації для всіх, хто цікавиться штучним інтелектом, від студентів та дослідників до підприємців та інженерів. Наші статті охоплюють широкий спектр тем, включаючи машинне навчання, глибинне навчання, природну мову, робототехніку, комп'ютерний зір та багато іншого.
+                <img src="ai-banner-800x450_tcm100-7204059_tcm100-6286607-32.jpg" alt="AI Technologies" class="about-image">
+            </p>
+    
+            <p class="about-text">
+                На нашому порталі ви знайдете інтерв'ю з провідними експертами у галузі AI, огляди нових наукових досліджень, а також практичні керівництва та навчальні матеріали, які допоможуть вам краще зрозуміти складні концепції та технології. Ми також висвітлюємо вплив штучного інтелекту на різні індустрії, такі як медицина, фінанси, виробництво, освіта та розваги.
+                <img src="artificial-intelligence.jpg" alt="AI Experts" class="about-image">
+            </p>
+    
+            <p class="about-text">
+                Окрім новин та аналітики, ми надаємо платформу для обговорення та обміну досвідом між фахівцями та ентузіастами. Ви можете приєднатися до нашого форуму, залишати коментарі до статей, а також підписатися на наші соціальні мережі, щоб завжди бути в курсі останніх новин та подій.
+                <img src="b0eaffe2be298405c170023c897514997edb81ac-2400x1260.jpg" alt="AI Community" class="about-image">
+            </p>
+    
+            <p class="about-text">
+                Ми постійно працюємо над тим, щоб зробити наш портал ще більш корисним та зручним для наших користувачів. Якщо у вас є пропозиції або запитання, будь ласка, зв'яжіться з нами через розділ "Контакти".
+                <img src="contact-us-customer-support-hotline-600nw-2067737414.jpg" alt="Contact Us" class="about-image">
+            </p>
+    
+            <p class="about-text red-text">
+                Дякуємо, що обрали наш портал як джерело інформації про штучний інтелект. Ми сподіваємось, що наші матеріали допоможуть вам краще зрозуміти цю захоплюючу та швидко розвиваючу галузь, а також надихнуть вас на нові досягнення та відкриття.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li><a href="Контакти.html" class="link" target="_blank">Контакти</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 Новини штучного інтелекту. Всі права захищені.</p>
+    </footer>
+</body>
+</html>
